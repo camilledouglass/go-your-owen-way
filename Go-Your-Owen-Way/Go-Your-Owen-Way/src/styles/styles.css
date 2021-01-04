@@ -1,0 +1,278 @@
+h1 {
+  text-align: center;
+}
+
+button {
+  height: 50px;
+  font-size: 15px;
+  font-family: "Press Start 2P", cursive;
+  border-radius: 12px;
+}
+
+/* Start Screen */
+
+.start-body {
+  background-color: #000;
+  font-family: "Press Start 2P", cursive;
+}
+
+.start-main {
+  background-image: url("../../images/backgroundStart.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+.start-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+  grid-template-areas: ". . ." "a a a" "b c ." ". d . ";
+}
+
+.start-header {
+  font-size: 25px;
+  /* border: 2px solid #000; */
+  grid-area: a;
+  justify-self: center;
+  padding: 25px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.start-avatar {
+  /* border: 2px solid #000; */
+  padding: 25px;
+  padding-left: 250px;
+  align-items: center;
+  grid-area: b;
+}
+
+.start-opener {
+  /* border: 2px solid #000; */
+  padding: 100px;
+  grid-area: c;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.start-footer {
+  padding: 100px;
+  padding-top: 0%;
+  grid-area: d;
+}
+
+/* Game Screen */
+
+.game-body {
+  background-color: rgb(0, 0, 0);
+  font-family: "Press Start 2P", cursive;
+}
+
+.game-main {
+  background-image: url("../../images/backgroundStart.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150vh;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-header {
+  font-size: 25px;
+  justify-self: center;
+  padding: 25px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.game-footer {
+  padding: 100px;
+  padding-top: 0%;
+}
+
+/* Death Screen */
+
+.start-dead {
+  background-image: url("../../images/frying-pan-dead.png");
+  background-size: 75% 50%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+.death-main {
+  background-color: black;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+.death-avitar-img {
+  max-width: 100%;
+  max-height: 600px;
+}
+
+.death-avatar {
+  align-items: center;
+  max-width: 100%;
+  width: 1000%;
+  height: 100%;
+  grid-area: b;
+}
+
+.death-header {
+  font-size: 25px;
+  grid-area: a;
+  justify-self: center;
+  padding: 25px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.death-footer {
+  background-color: black;
+  padding: 100px;
+  padding-top: 0%;
+}
+
+.death-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+  grid-template-areas: "a a a" "b b b" "c c c ";
+}
+
+.win-main {
+  background-color: rgb(214, 28, 137);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+.win-avatar {
+  align-items: center;
+  max-width: 100%;
+  width: 1000%;
+  height: 100%;
+  grid-area: b;
+}
+
+.win-header {
+  font-size: 25px;
+  /* border: 2px solid #000; */
+  grid-area: a;
+  justify-self: center;
+  padding: 25px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.win-footer {
+  background-color: black;
+  padding: 100px;
+  padding-bottom: 0%;
+  grid-area: c;
+}
+
+.win-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+  grid-template-areas: "a a a" "b b b" "c c c ";
+}
+
+/*Game Canvas*/
+
+#gameCanvas {
+  width: 1000px;
+  height: 800px;
+  border: 1px solid #000000;
+  /* display: block;
+   margin: 0 auto; */
+  background-color: #000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  animation-name: show;
+  animation-duration: 0.5s;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 10% auto;
+  border: 1px solid #888;
+  width: 60%;
+  height: 70%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  padding: 12px;
+  background-color: goldenrod;
+  color: white;
+}
+
+.modal-body {
+  padding: 12px;
+}
+
+.modal-footer {
+  position: absolute;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 12px;
+  bottom: 0;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 16px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
